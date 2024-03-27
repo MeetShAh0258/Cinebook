@@ -1,0 +1,40 @@
+﻿@model Actor
+
+@{
+	ViewData["title"] = "Adding new Actor";
+}
+
+
+<div class="col-md-8 offset-4">
+	<h1>Add a new Actor</h1>
+</div>
+<div class="row text mt-5">
+	<div class="col-md-5 offset-3">
+		<form asp-action="Create">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+			<div class="form-group">
+				<label asp-for="actorPictureURL" class="control-label"></label>
+				<input asp-for="actorPictureURL" class="form-control"></input>
+				<span asp-validation-for="actorPictureURL" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="actorName" class="control-label"></label>
+				<input asp-for="actorName" class="form-control"></input>
+				<span asp-validation-for="actorName" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="actorBio" class="control-label"></label>
+				<input asp-for="actorBio" class="form-control"></input>
+				<span asp-validation-for="actorBio" class="text-danger"></span>
+			</div>
+
+			<div class="form-group mt-3">
+				<input type="submit" class="btn btn-outline-primary float-end" />
+				<a class="btn btn-outline-secondary" asp-action="Index">Back</a>
+			</div>
+		</form>
+	</div>
+</div>
